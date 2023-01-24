@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 03 配置文件 -->
+
+<configuration>
+    <!-- 控制台日志输出的格式 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志的输出级别-->
+    <logger name="chapters.configuration" level="INFO"/>
+
+    <!-- Strictly speaking, the level attribute is not necessary since -->
+    <!-- the level of the root level is set to DEBUG by default.       -->
+    <!-- debug默认在控制台输出 -->
+    <root level="DEBUG">
+        <!-- 输出格式按照STDOUT -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
